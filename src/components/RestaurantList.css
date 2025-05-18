@@ -1,0 +1,137 @@
+.restaurant-list-section {
+  padding: 40px 0 30px 0;
+  background: #fff;
+}
+
+.restaurant-list-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+  text-align: left;
+  position: relative;
+  padding-left: 10px;
+}
+.restaurant-list-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #FF6B6B;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: flex-start;
+}
+
+.restaurant-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: 340px;
+  min-width: 260px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+.restaurant-card:hover {
+  box-shadow: 0 8px 32px rgba(255,107,107,0.13);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.restaurant-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+}
+.restaurant-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.restaurant-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #888;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 3px 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.restaurant-badge.rating {
+  background: #888;
+  top: 12px;
+  left: 12px;
+  right: auto;
+}
+.restaurant-badge.new {
+  background: #FF6B6B;
+  top: 12px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
+.restaurant-badge.status {
+  background: #e53935;
+  bottom: 12px;
+  top: auto;
+  right: 12px;
+  left: auto;
+  font-size: 1rem;
+  padding: 4px 18px;
+  border-radius: 6px;
+}
+.restaurant-badge.status.open {
+  background: #21b573;
+  color: #fff;
+}
+
+.restaurant-info {
+  padding: 18px 18px 12px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.restaurant-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+}
+.restaurant-address {
+  font-size: 0.98rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 900px) {
+  .restaurant-list {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .restaurant-card {
+    width: 98%;
+    min-width: unset;
+  }
+} 
